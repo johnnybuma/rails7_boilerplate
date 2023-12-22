@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root "home#index"
+
+
   resources :rooms do
     resources :messages
   end
@@ -18,7 +21,6 @@ Rails.application.routes.draw do
   #devise_for :users
   resources :users
 
-  root to: "home#index"
 
 
   mount ActionCable.server => '/cable'
