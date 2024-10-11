@@ -9,7 +9,7 @@ minio:
   service: S3
   access_key_id: <%= ENV["MINIO_ROOT_USER"] %>
   secret_access_key: <%= ENV["MINIO_ROOT_PASSWORD"] %>
-  region: us-east-1
-  bucket: jpbelectricinc
-  endpoint: "https://minio.nodeview.app:9000"
+  region: us-west-2
+  bucket: <%= ENV["MINIO_BUCKET_NAME"] %>
+  endpoint: <%= ENV["MINIO_API_URL"] %>
   force_path_style: true
